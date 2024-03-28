@@ -24,5 +24,26 @@ public class Main {
 
         //Nachrichten ausgeben
         System.out.println (socialNetwork.getAlleNachrichten ());
+
+        System.out.println("Erzeugtes Passwort: "+getPassword("Viel Spaß in der Mittagspause und dann Frohe Ostern") );
     }
+
+    private static String getPassword(String str){
+
+        var words = str.split(" ");
+
+        String password ="";
+
+        for(int i = 0; i < words.length; i++){
+            if(i%2 == 0){
+                password+=words[i].substring(0,1).toUpperCase();
+            }
+            else{
+                password+=words[i].substring(0,1).toLowerCase();
+            }
+        }
+        return password;
+    }
+
+
 }

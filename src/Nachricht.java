@@ -6,6 +6,7 @@ public abstract class Nachricht {
         this.absender=null;
         this.likes=0;
     }
+
     public Nachricht(Person absender){
         this.absender=absender;
         this.likes=0;
